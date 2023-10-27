@@ -1,27 +1,27 @@
 package binaris.jac.config;
 
-import java.io.IOException;
-
 public class ModConfig {
-    public static Config FIRST_CONFIG;
+    public static Config FIRST_CONFIG = new Config("first_config", "first_config", false);
+
+    // Just example configs :p
+    public static Config MOBS_CONFIG = new Config("random_mod", "mobs_config", true);
+    public static Config ITEMS_CONFIG = new Config("random_mod", "items_config", true);
+
     public static void registerConfig(){
-        FIRST_CONFIG = new Config("first_config", "first_config", false);
-
-
-
-        setValues();
-
-        try {
-            FIRST_CONFIG.load();
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
-
-    }
-
-    private static void setValues(){
+        // Some random and test values
         FIRST_CONFIG.set("value_string", "hello world");
         FIRST_CONFIG.set("value_int", 15);
+        FIRST_CONFIG.load();
+
+        // Config for our random mod:
+
+        MOBS_CONFIG.set("elemental_creeper_name", "fire creeper");
+        MOBS_CONFIG.set("elemental_creeper_damage", 50);
+        MOBS_CONFIG.load();
+
+        ITEMS_CONFIG.set("item_name", "just a random name");
+        ITEMS_CONFIG.set("available", 7);
+        ITEMS_CONFIG.load();
 
 
     }

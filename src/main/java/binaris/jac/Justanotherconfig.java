@@ -1,5 +1,6 @@
 package binaris.jac;
 
+import binaris.jac.config.Config;
 import binaris.jac.config.ModConfig;
 import net.fabricmc.api.ModInitializer;
 
@@ -14,5 +15,9 @@ public class Justanotherconfig implements ModInitializer {
 		ModConfig.registerConfig();
 
 		LOGGER.info("Hello Fabric world!");
+
+		LOGGER.info(Config.getString("elemental_creeper_name"));
+		LOGGER.info(String.valueOf(Config.getInt("available")));
+		LOGGER.info(String.valueOf(Config.getInt("value_int")));
 	}
 }
