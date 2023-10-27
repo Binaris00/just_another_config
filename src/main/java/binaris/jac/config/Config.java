@@ -13,7 +13,7 @@ public class Config {
     /**File name**/
     public String name;
     public File file;
-    /**If this folder is on a folder**/
+    /**If the config is on a folder**/
     public boolean onFolder;
     private static final HashMap<String, String> config = new HashMap<>();
     private final List<String> writeList = new ArrayList<>();
