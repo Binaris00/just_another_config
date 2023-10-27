@@ -78,3 +78,13 @@ Use these methods
 ```
 
 If you use a not existing key, this will throw a Runtime error.
+
+## How to put a comment or a empty line
+
+Use
+```java
+        FIRST_CONFIG.set("EmptyLine", null);
+        FIRST_CONFIG.set("Comment", "Use your comment here");
+	More data...
+	FIRST_CONFIG.load();
+```
