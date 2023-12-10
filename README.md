@@ -79,7 +79,7 @@ Use these methods
 
 If you use a not existing key, this will throw a Runtime error.
 
-## How to put a comment or a empty line
+## How to put a comment or an empty line
 
 Use
 ```java
